@@ -12,16 +12,16 @@ const UserDetails = ({users,loading})=>{
        }
       }, [id, users]);
 
-      if (loading) return <p>Loading...</p>; 
+      if (loading) return <div>Loading...</div>; 
       if (!currentUser) return <p>User not found.</p>;
 
     return(
         <>
-        <p>Name: {currentUser.name}</p>
-        <p>Username: {currentUser.username}</p>
-        <p>Email: {currentUser.email}</p>
-        <p>Phone: {currentUser.phone}</p>
-        <p>Website: {currentUser.website}</p>
+        <p><b>Name:</b> {currentUser.name}</p>
+        <p><b>Username:</b> {currentUser.username}</p>
+        <p><b>Email:</b> {currentUser.email}</p>
+        <p><b>Phone:</b> {currentUser.phone}</p>
+        <p><b>Website:</b> {currentUser.website}</p>
         </>
     )
 }
